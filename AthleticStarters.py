@@ -112,20 +112,7 @@ if files:
             background-size: cover;
             background-repeat: no-repeat;
             padding: 6px 20px 12px 40px;
-            #width: 100vw;
-            text-transform: uppercase;
-            margin-top: 0em;
-            margin-bottom: 0em;
-            margin-left: 0px;
-            margin-right: 0px;
-        }
-        .custom-table {
-            font-family: 'Poppins', sans-serif;
-            #font-size: 1.5em;
-            #font-weight: 800;
-            #color: #000000 !important;
-            #padding: 6px 20px 12px 40px;
-            #width: 100vw;
+            max-width: 1080px;
             text-transform: uppercase;
             margin-top: 0em;
             margin-bottom: 0em;
@@ -251,7 +238,7 @@ if files:
         f"""
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
-        <div class="custom-table">{styled.to_html()}</div>
+        {styled.to_html()}
     </div>
     """
     )
