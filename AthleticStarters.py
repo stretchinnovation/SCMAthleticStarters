@@ -83,12 +83,17 @@ match item:
     case _:
         columns_to_show = ["Surname", "Firstname", "Number", "Team"]
 
-# Load Poppins font globally and apply unified styles
+styled = (
+    df2[columns_to_show]
+    .style
+    .hide(axis="index")
+    .set_table_styles([])  # you can leave this empty if you’re handling CSS globally
+)
+
 st.markdown(
     """
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
-    /* Header bar */
     .custom-subheader {
         font-family: 'Poppins', sans-serif;
         font-size: 1.5em;
@@ -98,26 +103,20 @@ st.markdown(
         background-size: cover;
         background-repeat: no-repeat;
         padding: 6px 20px 10px 30px;
-        width: 100%;              /* match table width */
+        width: 100%;
         box-sizing: border-box;
         text-transform: uppercase;
         margin: 0;
     }
-
-    /* App background */
     .stApp {
         background-color: transparent; /* keep transparency */
     }
-
-    /* Container for header + table */
     #STARTERS {
         display: flex;
         flex-direction: column;
-        align-items: stretch;     /* children stretch to same width */
+        align-items: stretch;
         min-height: 100vh;
     }
-
-    /* Table styling */
     #STARTERS table {
         width: 100% !important;
         max-height: 240px;
@@ -126,7 +125,6 @@ st.markdown(
         border-collapse: collapse;
         border: none;
     }
-
     #STARTERS th {
         font-family: 'Poppins';
         font-weight: bold;
@@ -139,7 +137,6 @@ st.markdown(
         font-size: 18px;
         white-space: nowrap;
     }
-
     #STARTERS td {
         font-family: 'Poppins';
         text-transform: uppercase;
@@ -149,8 +146,6 @@ st.markdown(
         font-size: 18px;
         white-space: nowrap;
     }
-
-    /* Column widths and alignment */
     #STARTERS td.col0, #STARTERS th.col0 {
         text-align: center;
         width: 60px !important;
@@ -173,7 +168,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Render styled table and head string inside a RESULTS div
 st.markdown(
     f"""
     <div id="STARTERS">
@@ -183,4 +177,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
