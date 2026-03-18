@@ -98,7 +98,7 @@ st.markdown(
         background-image: url("app/static/KZNA_StartList_Title_Bar.png") !important;
         background-size: cover;
         background-repeat: no-repeat;
-        box-sizing: content-box;
+        box-sizing: content-box !important;
         padding: 6px 20px 10px 30px;
         max-width: 1080px;
         text-transform: uppercase;
