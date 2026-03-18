@@ -1,6 +1,37 @@
 import streamlit as st
 import pandas as pd
 
+import time
+import threading
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+CSV_PATH = "StartersData.csv"
+
+# --- Watchdog handler ---
+class CSVHandler(FileSystemEventHandler):
+    def on_modified(self, event):
+        if event.src_path.endswith(CSV_PATH):
+            # Trigger a rerun when the file changes
+            st.experimental_rerun()
+
+# --- Start watchdog in background thread ---
+def start_watcher():
+    event_handler = CSVHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path="data", recursive=False)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+
+# Run watcher in background thread
+threading.Thread(target=start_watcher, daemon=True).start()
+
 import glob
 files = glob.glob("StartersData.csv")
 #uploaded_file = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
