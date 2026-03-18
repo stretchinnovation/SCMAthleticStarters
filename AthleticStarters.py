@@ -88,6 +88,11 @@ st.markdown(
     """
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
+    .stApp {
+        background-color: #00ff00;
+    }
+    </style>
+    <style>
     .custom-subheader {
         font-family: 'Poppins', sans-serif;
         font-size: 1.5em;
@@ -110,16 +115,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 ) 
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #00ff00;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 # Create a Styler with transparent backgrounds
 styled = (
