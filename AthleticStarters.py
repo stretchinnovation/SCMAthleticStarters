@@ -112,7 +112,7 @@ if files:
             background-size: cover;
             background-repeat: no-repeat;
             padding: 6px 20px 12px 40px;
-            width: 100vw;
+            #width: 100vw;
             text-transform: uppercase;
             margin-top: 0em;
             margin-bottom: 0em;
