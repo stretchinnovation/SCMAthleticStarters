@@ -83,6 +83,43 @@ match item:
     case _:
         columns_to_show = ["Surname", "Firstname", "Number", "Team"]
 
+# Load Poppins font globally
+st.markdown(
+    """
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+    .custom-subheader {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5em;
+        font-weight: 800;
+        color: #000000 !important;
+        #background-color: #00ff00;
+        #background-image: linear-gradient(135deg, #EF7C19, #FCCB27) !important;
+        background-image: url("app/static/KZNA_StartList_Title_Bar.png") !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 6px 20px 10px 30px;
+        max-width: 1280px;
+        text-transform: uppercase;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+) 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #00ff00;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Create a Styler with transparent backgrounds
 styled = (
@@ -166,90 +203,29 @@ styled = (
         ]
     )
 )
-
+# Inject CSS for centering
 st.markdown(
     """
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
-    .custom-subheader {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.5em;
-        font-weight: 800;
-        color: #000000 !important;
-        background-image: url("https://raw.githubusercontent.com/stretchinnovation/SCMAthleticStarters/AthleticStarters/app/static/KZNA_StartList_Title_Bar.png") !important;
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 6px 20px 10px 30px;
-        width: 100%;
-        box-sizing: border-box;
-        text-transform: uppercase;
-        margin: 0;
-    }
-    .stApp {
-        background-color: transparent; /* keep transparency */
-    }
+    /* Center the RESULTS div in the page */
     #STARTERS {
         display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        min-height: 100vh;
-    }
-    #STARTERS table {
-        width: 100% !important;
-        max-height: 240px;
-        margin: 0;
-        padding: 0;
-        border-collapse: collapse;
-        border: none;
-    }
-    #STARTERS th {
-        font-family: 'Poppins';
-        font-weight: bold;
-        color: #ffffff;
-        background-image: linear-gradient(135deg, #E5007E,#b00466,#7a084f, #101020) !important;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 0;
-        border: none;
-        font-size: 18px;
-        white-space: nowrap;
-    }
-    #STARTERS td {
-        font-family: 'Poppins';
-        text-transform: uppercase;
-        background-image: linear-gradient(150deg, #101020, #303060) !important;
-        margin: 0;
-        padding: 0;
-        font-size: 18px;
-        white-space: nowrap;
-    }
-    #STARTERS td.col0, #STARTERS th.col0 {
-        text-align: center;
-        width: 60px !important;
-        padding: 0px 30px;
-    }
-    #STARTERS td.col1, #STARTERS th.col1,
-    #STARTERS td.col2, #STARTERS th.col2 {
-        text-align: left;
-        width: auto;
-        padding: 0px 30px;
-    }
-    #STARTERS td.col3, #STARTERS th.col3,
-    #STARTERS td.col4, #STARTERS th.col4 {
-        text-align: center;
-        width: 100px !important;
-        padding: 0px 30px;
+        justify-content: left;   /* horizontal center */
+        align-items: top;       /* vertical center */
+        flex-direction: column;    /* stack header + table */
+        min-height: 100vh;         /* take full viewport height */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-st.markdown(
+
+# Render styled table and head string inside a RESULTS div
+st.html(
     f"""
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
         {styled.to_html()}
     </div>
-    """,
-    unsafe_allow_html=True
+    """
 )
