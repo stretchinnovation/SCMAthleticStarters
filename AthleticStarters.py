@@ -221,12 +221,11 @@ st.markdown(
 )
 
 # Render styled table and head string inside a RESULTS div
-st.markdown(
-    """
+st.html(
+    f"""
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
         {styled.to_html()}
     </div>
-    """,
-    unsafe_allow_html=True
+    """
 )
