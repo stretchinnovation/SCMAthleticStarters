@@ -6,7 +6,7 @@ import threading
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-CSV_PATH = "/workspaces/SCMAthleticStarters/StartersData.csv"
+CSV_PATH = "StartersData.csv"
 
 # --- Watchdog handler ---
 class CSVHandler(FileSystemEventHandler):
