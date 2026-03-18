@@ -112,7 +112,7 @@ if files:
             background-size: contain;
             background-repeat: no-repeat;
             padding: 6px 20px 12px 40px;
-            #width: 100vw;
+            #width: 110vw;
             text-transform: uppercase;
             margin-top: 0em;
             margin-bottom: 0em;
