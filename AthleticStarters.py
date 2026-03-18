@@ -239,8 +239,8 @@ if files:
     <div id="STARTERS">
         <div class="custom-subheader">
             {head}
-            {styled.to_html()}
         </div>
+        {styled.to_html()}
     </div>
     """
     )
