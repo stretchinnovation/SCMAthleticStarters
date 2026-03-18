@@ -121,9 +121,9 @@ if files:
         }
         .custom-table {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5em;
-            font-weight: 800;
-            color: #000000 !important;
+            #font-size: 1.5em;
+            #font-weight: 800;
+            #color: #000000 !important;
             #padding: 6px 20px 12px 40px;
             #width: 100vw;
             text-transform: uppercase;
