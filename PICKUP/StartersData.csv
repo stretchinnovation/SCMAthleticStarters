@@ -1,5 +1,5 @@
 Seq,Item,Gender,Age,Round,Heat,Time,Wind
-1,200m,BLAH,35,A,1,07:00,
+1,200m,test,35,A,1,07:00,
 Lane,Surname,Firstname,Number,Team,,,
 1,Smith,John,946,ULD,,,
 2,Webb,Harry,670,DUM,,,
