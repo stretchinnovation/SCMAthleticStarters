@@ -83,11 +83,12 @@ match item:
     case _:
         columns_to_show = ["Surname", "Firstname", "Number", "Team"]
 
-# Load Poppins font globally and apply custom styles
+# Load Poppins font globally and apply unified styles
 st.markdown(
     """
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
+    /* Header bar */
     .custom-subheader {
         font-family: 'Poppins', sans-serif;
         font-size: 1.5em;
@@ -98,90 +99,78 @@ st.markdown(
         background-repeat: no-repeat;
         padding: 6px 20px 10px 30px;
         width: 100%;              /* match table width */
-        box-sizing: border-box;   /* include padding in width */
+        box-sizing: border-box;
         text-transform: uppercase;
-        margin: 0;                /* reset margins */
+        margin: 0;
     }
+
+    /* App background */
     .stApp {
-        background-color: #00ff00;
+        background-color: transparent; /* keep transparency */
     }
+
+    /* Container for header + table */
     #STARTERS {
         display: flex;
         flex-direction: column;
         align-items: stretch;     /* children stretch to same width */
         min-height: 100vh;
     }
+
+    /* Table styling */
     #STARTERS table {
-        width: 100% !important;   /* ensure table fills container */
+        width: 100% !important;
+        max-height: 240px;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: none;
+    }
+
+    #STARTERS th {
+        font-family: 'Poppins';
+        font-weight: bold;
+        color: #ffffff;
+        background-image: linear-gradient(135deg, #E5007E,#b00466,#7a084f, #101020) !important;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    #STARTERS td {
+        font-family: 'Poppins';
+        text-transform: uppercase;
+        background-image: linear-gradient(150deg, #101020, #303060) !important;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    /* Column widths and alignment */
+    #STARTERS td.col0, #STARTERS th.col0 {
+        text-align: center;
+        width: 60px !important;
+        padding: 0px 30px;
+    }
+    #STARTERS td.col1, #STARTERS th.col1,
+    #STARTERS td.col2, #STARTERS th.col2 {
+        text-align: left;
+        width: auto;
+        padding: 0px 30px;
+    }
+    #STARTERS td.col3, #STARTERS th.col3,
+    #STARTERS td.col4, #STARTERS th.col4 {
+        text-align: center;
+        width: 100px !important;
+        padding: 0px 30px;
     }
     </style>
     """,
     unsafe_allow_html=True
-)
-
-# Create a Styler with transparent backgrounds
-styled = (
-    df2[columns_to_show]
-    .style
-    .hide(axis="index")
-    .set_table_styles(
-        [
-            {"selector": "table", "props": [
-                ("width", "100%"),
-                ("max-height", "240px"),
-                ("margin", "0px"),
-                ("padding", "0px"),
-                ("border-collapse", "collapse"),
-                ("border", "none")
-            ]},
-            {"selector": "th", "props": [
-                ("font-family", "Poppins"),
-                ("font-weight", "bold"),
-                ("color", "#ffffff"),
-                ("background-image", "linear-gradient(135deg, #E5007E,#b00466,#7a084f, #101020) !important"),
-                ("text-transform", "uppercase"),
-                ("margin", "0px"),
-                ("padding", "0px"),
-                ("border", "none"),
-                ("font-size", "18px"),
-                ("white-space", "nowrap")
-            ]},
-            {"selector": "td", "props": [
-                ("font-family", "Poppins"),
-                ("text-transform", "uppercase"),
-                ("background-image", "linear-gradient(150deg, #101020, #303060) !important"),
-                ("margin", "0px"),
-                ("padding", "0px"),
-                ("font-size", "18px"),
-                ("white-space", "nowrap")
-            ]},
-            {"selector": "td.col0, th.col0", "props": [
-                ("text-align", "center"),
-                ("width", "60px !important"),
-                ("padding", "0px 30px"),
-            ]},
-            {"selector": "td.col1, th.col1", "props": [
-                ("text-align", "left"),
-                ("width", "auto"),
-                ("padding", "0px 30px"),
-            ]},
-            {"selector": "td.col2, th.col2", "props": [
-                ("text-align", "left"),
-                ("width", "auto"),
-                ("padding", "0px 30px"),
-            ]},
-            {"selector": "td.col3, th.col3", "props": [
-                ("text-align", "center"),
-                ("width", "100px !important"),
-                ("padding", "0px 30px"),
-            ]},
-            {"selector": "td.col4, th.col4", "props": [
-                ("text-align", "center"),
-                ("width", "100px !important"),
-                ("padding", "0px 30px"),
-            ]},
-        ]
-    )
 )
 
 # Render styled table and head string inside a RESULTS div
@@ -194,3 +183,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
