@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 
-CSV_URL = "https://raw.githubusercontent.com/stretchinnovation/SCMAthleticStarters/refs/heads/AthleticStarters/StartersData.csv"
+CSV_URL = "https://raw.githubusercontent.com/stretchinnovation/SCMAthleticStarters/AthleticStarters/StartersData.csv"
 
 @st.cache_data(ttl=5)
 def load_lines(url):
@@ -20,39 +20,6 @@ data2 = lines[3:]
 df1 = pd.DataFrame(data1, columns=header1)
 df2 = pd.DataFrame(data2, columns=header2)
 
-"""
-#import glob
-#files = glob.glob("StartersData.csv")
-#uploaded_file = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
-
-#if files:
-    # Read raw lines from the first file
- #   with open(files[0], "rb") as f:
-  #      lines = [line.decode("utf-8").strip().split(",") for line in f.readlines()]
-
-    # continue with your header1, header2, df1, df2 logic...
-#else:
-#    st.error("No CSV files found in SCM/PICKUP/")
-
-# Upload CSV file
-#uploaded_file = st.file_uploader("StartersData.csv", type="csv")
-
-#if uploaded_file is not None:
-    # Read raw lines from the uploaded file
-    #lines = [line.decode("utf-8").strip().split(",") for line in uploaded_file.readlines()]
-
-    # Extract headers
-    header1 = lines[0]   # row 1
-    header2 = lines[2]   # row 3
-
-    # Extract data
-    data1 = [lines[1]]   # row 2 belongs to header1
-    data2 = lines[3:]    # rows after row 3 belong to header2
-
-    # Build DataFrames
-    df1 = pd.DataFrame(data1, columns=header1)
-    df2 = pd.DataFrame(data2, columns=header2)
-"""
 # --- Build single string from df1 ---
 # Specify the order of fields you want
 df1.columns = df1.columns.str.strip()
@@ -254,11 +221,12 @@ st.markdown(
 )
 
 # Render styled table and head string inside a RESULTS div
-st.html(
-    f"""
-<div id="STARTERS">
-    <div class="custom-subheader">{head}</div>
-    {styled.to_html()}
-</div>
-"""
+st.markdown(
+    """
+    <div id="STARTERS">
+        <div class="custom-subheader">{head}</div>
+        {styled.to_html()}
+    </div>
+    """,
+    unsafe_allow_html=True
 )
