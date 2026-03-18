@@ -116,8 +116,8 @@ if files:
             text-transform: uppercase;
             margin-top: 0em;
             margin-bottom: 0em;
-            margin-left: 2px;
-            margin-right: 2px;
+            margin-left: 0px;
+            margin-right: 0px;
         }
         </style>
         """,
