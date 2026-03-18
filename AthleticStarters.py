@@ -104,7 +104,7 @@ st.markdown(
         background-size: cover;
         background-repeat: no-repeat;
         padding: 6px 20px 10px 30px;
-        Width: 100vw;
+        #max-width: 1280px;
         text-transform: uppercase;
         margin-top: 0em;
         margin-bottom: 0em;
