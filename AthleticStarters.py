@@ -111,13 +111,13 @@ if files:
             background-image: url("app/static/KZNA_StartList_Title_Bar.png") !important;
             background-size: cover;
             background-repeat: no-repeat;
-            padding: 6px 20px 12px 40px;
+            padding: 6px 20px 10px 40px;
             max-width: 1080px;
             text-transform: uppercase;
             margin-top: 0em;
             margin-bottom: 0em;
-            margin-left: 0px;
-            margin-right: 0px;
+            margin-left: 2px;
+            margin-right: 2px;
         }
         </style>
         """,
