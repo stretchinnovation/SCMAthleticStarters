@@ -109,10 +109,10 @@ if files:
             #background-color: #00ff00;
             #background-image: linear-gradient(135deg, #EF7C19, #FCCB27) !important;
             background-image: url("app/static/KZNA_StartList_Title_Bar.png") !important;
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
-            padding: 6px 20px 12px 40px;
-            #width: 110vw;
+            padding: 6px 0px 12px 0px;
+            #width: 100vw;
             text-transform: uppercase;
             margin-top: 0em;
             margin-bottom: 0em;
