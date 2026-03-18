@@ -237,8 +237,10 @@ if files:
     st.html(
         f"""
     <div id="STARTERS">
-        <div class="custom-subheader">{head}</div>
-        {styled.to_html()}
+        <div class="custom-subheader">
+            {head}
+            {styled.to_html()}
+        </div>
     </div>
     """
     )
