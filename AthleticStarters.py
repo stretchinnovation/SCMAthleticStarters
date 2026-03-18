@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import requests
 
 CSV_URL = "https://raw.githubusercontent.com/stretchinnovation/SCMAthleticStarters/refs/heads/AthleticStarters/StartersData.csv"
 
