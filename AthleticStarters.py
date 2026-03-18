@@ -19,7 +19,7 @@ uploaded_file = st.file_uploader("StartersData.csv", type="csv")
 
 if uploaded_file is not None:
     # Read raw lines from the uploaded file
-   lines = [line.decode("utf-8").strip().split(",") for line in uploaded_file.readlines()]
+    lines = [line.decode("utf-8").strip().split(",") for line in uploaded_file.readlines()]
 
     # Extract headers
     header1 = lines[0]   # row 1
