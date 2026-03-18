@@ -1,0 +1,16 @@
+name: Streamlit Cloud Redeploy
+
+on:
+  push:
+    branches:
+      - AthleticStarters   # or "main" if that's your default branch
+    paths:
+      - '**'               # trigger on changes to any file in the repo
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Streamlit Cloud redeploy
+        run: |
+          echo "Redeploy triggered by commit to $GITHUB_REF"
