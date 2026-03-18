@@ -1,56 +1,25 @@
 import streamlit as st
 import pandas as pd
 
-import time
-import threading
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
-
-CSV_PATH = "StartersData.csv"
-
-# --- Watchdog handler ---
-class CSVHandler(FileSystemEventHandler):
-    def on_modified(self, event):
-        if event.src_path.endswith(CSV_PATH):
-            # Trigger a rerun when the file changes
-            st.experimental_rerun()
-
-# --- Start watchdog in background thread ---
-def start_watcher():
-    event_handler = CSVHandler()
-    observer = Observer()
-    observer.schedule(event_handler, path="data", recursive=False)
-    observer.start()
-
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        observer.stop()
-    observer.join()
-
-# Run watcher in background thread
-threading.Thread(target=start_watcher, daemon=True).start()
-
-import glob
-files = glob.glob("StartersData.csv")
+#import glob
+#files = glob.glob("StartersData.csv")
 #uploaded_file = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
 
-if files:
+#if files:
     # Read raw lines from the first file
-    with open(files[0], "rb") as f:
-        lines = [line.decode("utf-8").strip().split(",") for line in f.readlines()]
+ #   with open(files[0], "rb") as f:
+  #      lines = [line.decode("utf-8").strip().split(",") for line in f.readlines()]
 
     # continue with your header1, header2, df1, df2 logic...
 #else:
 #    st.error("No CSV files found in SCM/PICKUP/")
 
 # Upload CSV file
-#uploaded_file = st.file_uploader("", type="csv")
+uploaded_file = st.file_uploader("StartersData.csv", type="csv")
 
-#if uploaded_file is not None:
+if uploaded_file is not None:
     # Read raw lines from the uploaded file
-#    lines = [line.decode("utf-8").strip().split(",") for line in uploaded_file.readlines()]
+   lines = [line.decode("utf-8").strip().split(",") for line in uploaded_file.readlines()]
 
     # Extract headers
     header1 = lines[0]   # row 1
