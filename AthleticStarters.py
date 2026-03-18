@@ -112,6 +112,15 @@ st.markdown(
         margin-right: 2px;
     }
     </style>
+    <style>
+    #STARTERS {
+        display: flex;
+        justify-content: left;   /* horizontal center */
+        align-items: top;       /* vertical center */
+        flex-direction: column;    /* stack header + table */
+        min-height: 100vh;         /* take full viewport height */
+    }
+    </style>
     """,
     unsafe_allow_html=True
 ) 
@@ -199,22 +208,8 @@ styled = (
         ]
     )
 )
-# Inject CSS for centering
-st.markdown(
-    """
-    <style>
-    /* Center the RESULTS div in the page */
-    #STARTERS {
-        display: flex;
-        justify-content: left;   /* horizontal center */
-        align-items: top;       /* vertical center */
-        flex-direction: column;    /* stack header + table */
-        min-height: 100vh;         /* take full viewport height */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
+
 
 # Render styled table and head string inside a RESULTS div
 st.html(
