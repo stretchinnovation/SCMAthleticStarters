@@ -148,7 +148,7 @@ if files:
                     ("margin", "0px"),
                     ("padding", "0px 0px"),
                     ("border-collapse", "collapse"),  # ensure borders collapse
-                    ("border", "none")
+                    ("border-spacing", "0px")
                 ]},
                 # Header styling 
                 {"selector": "th", "props": [
