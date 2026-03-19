@@ -115,9 +115,18 @@ st.markdown(
 # Create a Styler with transparent backgrounds
 # Decide alignment for first column based on number of columns
 if len(columns_to_show) == 4:
-    first_col_align = "left"
+    align_1 = "left"
+    align_2 = "left"
+    align_3 = "center"
+    align_4 = "center"
+    align_5 = "center"
+    
 else:
-    first_col_align = "center"
+    align_1 = "center"
+    align_2 = "left"
+    align_3 = "left"
+    align_4 = "center"
+    align_5 = "center"
 
 styled = (
     df2[columns_to_show]
@@ -160,24 +169,24 @@ styled = (
             ]},
             # First column alignment (conditional)
             {"selector": "td.col0, th.col0", "props": [
-                ("text-align", first_col_align),
+                ("text-align", align_1),
                 ("padding", "0px 30px"),
             ]},
             # Other column alignments
             {"selector": "td.col1, th.col1", "props": [
-                ("text-align", "left"),
+                ("text-align", align_2),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col2, th.col2", "props": [
-                ("text-align", "left"),
+                ("text-align", align_3),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col3, th.col3", "props": [
-                ("text-align", "center"),
+                ("text-align", align_4),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col4, th.col4", "props": [
-                ("text-align", "center"),
+                ("text-align", align_5),
                 ("padding", "0px 30px"),
             ]},
         ]
