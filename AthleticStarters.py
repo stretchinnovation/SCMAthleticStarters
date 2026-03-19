@@ -143,7 +143,7 @@ styled = (
             # Table dimensions
             {"selector": "table", "props": [
                 ("width", "100%"),          # stretch to parent width
-                ("table-layout", "fixed"),   # keep proportional sizing
+                ("table-layout", "auto"),   # keep proportional sizing
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
@@ -220,9 +220,12 @@ styled = (
 # Render styled table and head string inside a RESULTS div
 st.html(
     f"""
-    <div id="STARTERS">
-        <div class="custom-subheader">{head}</div>
+    
+    <div id="TABLE">
+        <div id="STARTERS">
+            <div class="custom-subheader">{head}</div>
+        </div>
+        {styled.to_html()}
     </div>
-    <div id="TABLE">{styled.to_html()}</div>
     """
 )
