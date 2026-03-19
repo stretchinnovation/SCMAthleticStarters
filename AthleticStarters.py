@@ -43,8 +43,6 @@ if age < 20:
     age = "U19"
 elif age in range (20,30):
     age = "SENIOR"
-elif age in range (25,29):
-    age = "SENIOR"
 else: 
     age = "MASTERS" #+str(age)
 
