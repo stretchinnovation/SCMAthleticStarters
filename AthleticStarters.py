@@ -140,7 +140,7 @@ styled = (
             # Table dimensions
             {"selector": "table", "props": [
                 ("width", "100vw !important"),
-                ("display","block"),
+                ("table-layout", "auto")
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
@@ -151,7 +151,6 @@ styled = (
                 ("font-family", "Poppins"),
                 ("font-weight", "bold"),
                 ("color", "#ffffff"),
-                
                 ("background-image", "linear-gradient(135deg, #E5007E,#E5007E,#E5007E,#E5007E,#E5007E,#b00466,#7a084f, #101020) !important"),
                 ("text-transform", "uppercase"),
                 ("margin", "0px"),
@@ -173,29 +172,29 @@ styled = (
             # Force fixed widths with !important
             {"selector": "td.col0, th.col0", "props": [
                 ("text-align", "center"),
-                ("width", "20px !important"),
+                #("width", "20px !important"),
                 ("padding", "0px 20px"),
             ]},
             {"selector": "td.col1, th.col1", "props": [
                 ("text-align", "left"),
-                ("width", "auto"),
+                #("width", "auto"),
                 ("padding", "0px 20px"),
             ]},
             {"selector": "td.col2, th.col2", "props": [
                 ("text-align", "left"),
-                ("width", "auto"),
+                #("width", "auto"),
                 ("padding", "0px 20px"),
             ]},
             {"selector": "td.col3, th.col3", "props": [
                 ("text-align", "center"),
                 ("text-align", "center"),
-                ("width", "20px !important"),
+                #("width", "20px !important"),
                 ("padding", "0px 20px"),
             ]},
             {"selector": "td.col4, th.col4", "props": [
                 ("text-align", "center"),
                 ("text-align", "center"),
-                ("width", "20px !important"),
+                #("width", "20px !important"),
                 ("padding", "0px 20px"),
             ]},
             #{"selector": "td.col5, th.col5", "props": [
