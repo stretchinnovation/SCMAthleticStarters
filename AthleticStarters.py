@@ -122,6 +122,9 @@ st.markdown(
             #min-height: 100vh;         /* take full viewport height */
             width = auto;
         }
+        #TABLE {
+            width = auto;
+        }
         </style>
     
     </style>
@@ -219,9 +222,7 @@ st.html(
     f"""
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
-        
-        
     </div>
-    <div>{styled.to_html()}</div>
+    <div id="TABLE">{styled.to_html()}</div>
     """
 )
