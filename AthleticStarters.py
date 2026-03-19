@@ -112,18 +112,7 @@ st.markdown(
         margin-left: 2px;
         margin-right: 2px;
     }
-    .custom-table {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.5em;
-        color: #000000 !important;
-        padding: 0px;
-        max-width: 736px !important;
-        text-transform: uppercase;
-        margin-top: 0em;
-        margin-bottom: 0em;
-        margin-left: 2px;
-        margin-right: 2px;
-    }
+  
     </style>
     """,
     unsafe_allow_html=True
@@ -219,7 +208,7 @@ st.html(
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
         <br>
-        <div class="custom-table">{styled.to_html()}</div>
+        <div>{styled.to_html()}</div>
         
     </div>
     """
