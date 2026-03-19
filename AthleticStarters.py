@@ -83,6 +83,7 @@ match item:
     case _:
         columns_to_show = ["Surname", "Firstname", "Number", "Team"]
 
+
 # Load Poppins font globally
 st.markdown(
     """
@@ -104,7 +105,7 @@ st.markdown(
         background-size: cover;
         background-repeat: no-repeat;
         padding: 6px 20px 10px 30px;
-        #max-width: 1280px;
+        width: 100vw;
         text-transform: uppercase;
         margin-top: 0em;
         margin-bottom: 0em;
