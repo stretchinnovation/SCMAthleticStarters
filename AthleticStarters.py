@@ -68,6 +68,8 @@ match item:
         columns_to_show = ["Lane", "Surname", "Firstname", "Number", "Team"]
     case i if "800m" in i:
         columns_to_show = ["Lane", "Surname", "Firstname", "Number", "Team"]
+    case i if "hurdles" in i:
+        columns_to_show = ["Lane", "Surname", "Firstname", "Number", "Team"]
     case i if "relay" in i:
         columns_to_show = ["Lane", "Surname", "Firstname", "Number", "Team"]
     case _:
