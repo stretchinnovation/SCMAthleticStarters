@@ -1,16 +1,24 @@
-name: Streamlit Cloud Redeploy
+name: Force Streamlit Redeploy
 
 on:
   push:
     branches:
-      - AthleticStarters   # or "main" if that's your default branch
+      - AthleticStarters
     paths:
-      - '**'               # trigger on changes to any file in the repo
+      - '**.csv'
 
 jobs:
-  redeploy:
+  force-redeploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Streamlit Cloud redeploy
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Update timestamp in dummy file
         run: |
-          echo "Redeploy triggered by commit to $GITHUB_REF"
+          echo "# redeploy trigger $(date)" > redeploy_trigger.py
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add redeploy_trigger.py
+          git commit -m "Trigger redeploy"
+          git push
