@@ -1,6 +1,6 @@
-"Seq","Item","Gender","Age","Round","Heat","Time","Wind"
+Seq,Item,Gender,Age,Round,Heat,Time,Wind
 4,10km,Men,25,F,0,06:00,
-"Lane","Surname","Firstname","Number","Team"
+Lane,Surname,Firstname,Number,Team
 1,NOSE,NCWENGA,384,PHA
 2,MOTLAGALE,TUMELO,383,PHA
 3,SEKGONYANA,MAHLOMOLA,386,PHA
