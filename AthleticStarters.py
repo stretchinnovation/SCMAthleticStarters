@@ -28,11 +28,11 @@ if files:
     df1.columns = df1.columns.str.strip()
 
     # Allocate each field into its own string variable
-    round = str(df1.iloc[0]["\""+"Round"+"\""])
-    heat = str(df1.iloc[0]["\""+"Heat"+"\""])
-    gender = str(df1.iloc[0]["\""+"Gender"+"\""])
-    age = int(df1.iloc[0]["\""+"Age"+"\""])
-    item = str(df1.iloc[0]["\""+"Item"+"\""])
+    round = str(df1.iloc[0]["Round"])
+    heat = str(df1.iloc[0]["Heat"])
+    gender = str(df1.iloc[0]["Gender"])
+    age = int(df1.iloc[0]["Age"])
+    item = str(df1.iloc[0]["Item"])
 
 if round == "F":
     round = "FINAL"
