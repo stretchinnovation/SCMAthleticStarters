@@ -113,6 +113,12 @@ st.markdown(
 )
 
 # Create a Styler with transparent backgrounds
+# Decide alignment for first column based on number of columns
+if len(columns_to_show) == 4:
+    first_col_align = "left"
+else:
+    first_col_align = "center"
+
 styled = (
     df2[columns_to_show]
     .style
@@ -121,78 +127,64 @@ styled = (
         [
             # Table dimensions
             {"selector": "table", "props": [
-                ("width", "100vw"),
+                ("width", "100%"),
+                ("table-layout", "auto"),
                 ("max-height", "240px"),
-                ("margin", "0px"),
-                ("padding", "0px 0px"),
-                ("border-collapse", "collapse")  # ensure borders collapse
+                ("margin", "0"),
+                ("padding", "0"),
+                ("border-collapse", "collapse"),
+                ("border", "none")
             ]},
             # Header styling 
             {"selector": "th", "props": [
                 ("font-family", "Poppins"),
                 ("font-weight", "bold"),
                 ("color", "#ffffff"),
-                ("background-image", "linear-gradient(135deg, #E5007E,#E5007E,#E5007E,#E5007E,#E5007E,#b00466,#7a084f, #101020) !important"),
+                ("background-image", "linear-gradient(135deg, #E5007E,#b00466,#7a084f, #101020) !important"),
                 ("text-transform", "uppercase"),
-                ("margin", "0px"),
-                ("padding", "0px 0px"),
+                ("margin", "0"),
+                ("padding", "0"),
                 ("border", "none"),
                 ("font-size", "18px"),
-                ("white-space", "nowrap")  # prevent wrapping in headers
+                ("white-space", "nowrap")
             ]},
             # Cell styling
             {"selector": "td", "props": [
                 ("font-family", "Poppins"),
                 ("text-transform", "uppercase"),
-                ("background-image", "linear-gradient(150deg, #101020,#101020,#101020, #303060) !important"),
-                ("margin", "0px"),
-                ("padding", "0px 0px"),
-                #("border", "none"),
+                ("background-image", "linear-gradient(150deg, #101020, #303060) !important"),
+                ("margin", "0"),
+                ("padding", "0"),
                 ("font-size", "18px"),
-                ("white-space", "nowrap")  # prevent wrapping in headers
+                ("white-space", "nowrap")
             ]},
-            # Force fixed widths with !important
+            # First column alignment (conditional)
             {"selector": "td.col0, th.col0", "props": [
-                ("text-align", "left"),
-                ("width", "60px !important"),
+                ("text-align", first_col_align),
                 ("padding", "0px 30px"),
             ]},
+            # Other column alignments
             {"selector": "td.col1, th.col1", "props": [
                 ("text-align", "left"),
-                ("width", "auto"),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col2, th.col2", "props": [
                 ("text-align", "left"),
-                ("width", "auto"),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col3, th.col3", "props": [
                 ("text-align", "center"),
-                ("text-align", "center"),
-                ("width", "100px !important"),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col4, th.col4", "props": [
                 ("text-align", "center"),
-                ("text-align", "center"),
-                ("width", "100px !important"),
                 ("padding", "0px 30px"),
             ]},
-            #{"selector": "td.col5, th.col5", "props": [
-            #    ("text-align", "center"),
-            #    ("text-align", "center"),
-            #    ("width", "100px !important"),
-            #    ("padding", "0px 30px"),
-            #]},
-            # Alignment overrides
-            {"selector": "td.col0", "props": [("text-align", "center")]}, # Place
-            {"selector": "td.col3", "props": [("text-align", "center")]}, # Number
-            {"selector": "td.col4", "props": [("text-align", "center")]}, # Team
-            #{"selector": "td.col5", "props": [("text-align", "center")]}, # Performance
         ]
     )
 )
+
+
 # Inject CSS for centering
 st.markdown(
     """
