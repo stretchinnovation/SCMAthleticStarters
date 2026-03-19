@@ -1,6 +1,6 @@
-"Seq","Item","Gender","Age","Round","Heat","Time","Wind"
+Seq,Item,Gender,Age,Round,Heat,Time,Wind
 11,Javelin,Men,25,F,0,08:00,
-"Lane","Surname","Firstname","Number","Team"
+Lane,Surname,Firstname,Number,Team
 1,MCINTYRE,JADEN,14,CKS
 2,SITHOLE,SAKHILE BRIAN,6,ASP
 3,KUNENE,SIPHOSETHU,352,NCS
