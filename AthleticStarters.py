@@ -112,7 +112,17 @@ st.markdown(
         margin-left: 2px;
         margin-right: 2px;
     }
-  
+        <style>
+        /* Center the RESULTS div in the page */
+        #STARTERS {
+            display: flex;
+            justify-content: left;   /* horizontal center */
+            align-items: top;       /* vertical center */
+            flex-direction: column;    /* stack header + table */
+            min-height: 100vh;         /* take full viewport height */
+        }
+        </style>
+    
     </style>
     """,
     unsafe_allow_html=True
@@ -207,7 +217,6 @@ st.html(
     f"""
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
-        <br>
         <div>{styled.to_html()}</div>
         
     </div>
