@@ -4,7 +4,6 @@ import requests
 
 CSV_URL = "https://raw.githubusercontent.com/stretchinnovation/SCMAthleticStarters/AthleticStarters/StartersData.csv"
 
-@st.cache_data(ttl=5)
 def load_lines(url):
     response = requests.get(url)
     response.raise_for_status()
