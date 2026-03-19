@@ -1,34 +1,38 @@
 import streamlit as st
 import pandas as pd
-import requests
 
-CSV_URL = "https://raw.githubusercontent.com/stretchinnovation/SCMAthleticStarters/AthleticStarters/StartersData.csv"
+import glob
+files = glob.glob("PICKUP/StartersData.csv")
+#uploaded_file = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
 
-def load_lines(url):
-    response = requests.get(url)
-    response.raise_for_status()
-    return [line.strip().split(",") for line in response.text.splitlines()]
+if files:
+    # Read raw lines from the first file
+    with open(files[0], "rb") as f:
+        lines = [line.decode("utf-8").strip().split(",") for line in f.readlines()]
 
-lines = load_lines(CSV_URL)
+ 
+    # Extract headers
+    header1 = lines[0]   # row 1
+    header2 = lines[2]   # row 3
 
-header1 = lines[0]
-header2 = lines[2]
-data1 = [lines[1]]
-data2 = lines[3:]
+    # Extract data
+    data1 = [lines[1]]   # row 2 belongs to header1
+    data2 = lines[3:]    # rows after row 3 belong to header2
 
-df1 = pd.DataFrame(data1, columns=header1)
-df2 = pd.DataFrame(data2, columns=header2)
+    # Build DataFrames
+    df1 = pd.DataFrame(data1, columns=header1)
+    df2 = pd.DataFrame(data2, columns=header2)
 
-# --- Build single string from df1 ---
-# Specify the order of fields you want
-df1.columns = df1.columns.str.strip()
+    # --- Build single string from df1 ---
+    # Specify the order of fields you want
+    df1.columns = df1.columns.str.strip()
 
-# Allocate each field into its own string variable
-round = str(df1.iloc[0]["Round"])
-heat = str(df1.iloc[0]["Heat"])
-gender = str(df1.iloc[0]["Gender"])
-age = int(df1.iloc[0]["Age"])
-item = str(df1.iloc[0]["Item"])
+    # Allocate each field into its own string variable
+    round = str(df1.iloc[0]["Round"])
+    heat = str(df1.iloc[0]["Heat"])
+    gender = str(df1.iloc[0]["Gender"])
+    age = int(df1.iloc[0]["Age"])
+    item = str(df1.iloc[0]["Item"])
 
 if round == "F":
     round = "FINAL"
