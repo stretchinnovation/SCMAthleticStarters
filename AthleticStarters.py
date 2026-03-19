@@ -139,7 +139,7 @@ styled = (
         [
             # Table dimensions
             {"selector": "table", "props": [
-                #("width", "100%"),
+                ("max-width", "704px !important"),
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
@@ -171,30 +171,30 @@ styled = (
             # Force fixed widths with !important
             {"selector": "td.col0, th.col0", "props": [
                 ("text-align", "center"),
-                ("width", "30px !important"),
-                ("padding", "0px 30px"),
+                ("width", "20px !important"),
+                ("padding", "0px 20px"),
             ]},
             {"selector": "td.col1, th.col1", "props": [
                 ("text-align", "left"),
                 ("width", "auto"),
-                ("padding", "0px 30px"),
+                ("padding", "0px 20px"),
             ]},
             {"selector": "td.col2, th.col2", "props": [
                 ("text-align", "left"),
                 ("width", "auto"),
-                ("padding", "0px 30px"),
+                ("padding", "0px 20px"),
             ]},
             {"selector": "td.col3, th.col3", "props": [
                 ("text-align", "center"),
                 ("text-align", "center"),
-                ("width", "40px !important"),
-                ("padding", "0px 30px"),
+                ("width", "20px !important"),
+                ("padding", "0px 20px"),
             ]},
             {"selector": "td.col4, th.col4", "props": [
                 ("text-align", "center"),
                 ("text-align", "center"),
-                ("width", "100px !important"),
-                ("padding", "0px 30px"),
+                ("width", "20px !important"),
+                ("padding", "0px 20px"),
             ]},
             #{"selector": "td.col5, th.col5", "props": [
             #    ("text-align", "center"),
