@@ -150,6 +150,7 @@ styled = (
                 ("font-family", "Poppins"),
                 ("font-weight", "bold"),
                 ("color", "#ffffff"),
+                ("display","block"),
                 ("background-image", "linear-gradient(135deg, #E5007E,#E5007E,#E5007E,#E5007E,#E5007E,#b00466,#7a084f, #101020) !important"),
                 ("text-transform", "uppercase"),
                 ("margin", "0px"),
