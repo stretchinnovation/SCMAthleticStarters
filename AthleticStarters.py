@@ -117,7 +117,7 @@ st.markdown(
         font-size: 1.5em;
         color: #000000 !important;
         padding: 0px;
-        #width: 100%;
+        max-width: 736px;
         text-transform: uppercase;
         margin-top: 0em;
         margin-bottom: 0em;
