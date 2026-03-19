@@ -163,7 +163,7 @@ styled = (
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col2, th.col2", "props": [
-                ("text-align", "center"),
+                ("text-align", "left"),
                 ("width", "auto"),
                 ("padding", "0px 30px"),
             ]},
@@ -186,7 +186,7 @@ styled = (
             #    ("padding", "0px 30px"),
             #]},
             # Alignment overrides
-            {"selector": "td.col0", "props": [("text-align", "left")]}, # Place
+            {"selector": "td.col0", "props": [("text-align", "center")]}, # Place
             {"selector": "td.col3", "props": [("text-align", "center")]}, # Number
             {"selector": "td.col4", "props": [("text-align", "center")]}, # Team
             #{"selector": "td.col5", "props": [("text-align", "center")]}, # Performance
