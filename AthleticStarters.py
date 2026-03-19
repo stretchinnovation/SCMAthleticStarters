@@ -222,7 +222,8 @@ st.html(
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
         <br>
-        {styled.to_html()}
+        <div class="custom-table">{styled.to_html()}</div>
+        
     </div>
     """
 )
