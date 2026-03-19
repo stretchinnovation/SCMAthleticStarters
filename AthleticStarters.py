@@ -120,7 +120,7 @@ st.markdown(
             #align-items: top;       /* vertical center */
             #flex-direction: column;    /* stack header + table */
             #min-height: 100vh;         /* take full viewport height */
-            width = 100% vw
+            width = auto;
         }
         </style>
     
