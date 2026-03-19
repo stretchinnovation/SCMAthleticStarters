@@ -140,6 +140,7 @@ styled = (
             # Table dimensions
             {"selector": "table", "props": [
                 ("width", "100vw !important"),
+                ("display","block"),
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
@@ -150,7 +151,7 @@ styled = (
                 ("font-family", "Poppins"),
                 ("font-weight", "bold"),
                 ("color", "#ffffff"),
-                ("display","block"),
+                
                 ("background-image", "linear-gradient(135deg, #E5007E,#E5007E,#E5007E,#E5007E,#E5007E,#b00466,#7a084f, #101020) !important"),
                 ("text-transform", "uppercase"),
                 ("margin", "0px"),
