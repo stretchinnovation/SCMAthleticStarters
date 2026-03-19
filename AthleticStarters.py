@@ -30,7 +30,7 @@ if files:
     # Allocate each field into its own string variable
     round = str(df1.iloc[0]["\""+"Round"+"\""])
     heat = str(df1.iloc[0]["\""+"Heat"+"\""])
-    gender = str(df1.iloc[0]["\"""Gender"+"\""])
+    gender = str(df1.iloc[0]["\""+"Gender"+"\""])
     age = int(df1.iloc[0]["\""+"Age"+"\""])
     item = str(df1.iloc[0]["\""+"Item"+"\""])
 
