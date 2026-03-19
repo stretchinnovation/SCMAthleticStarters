@@ -139,7 +139,7 @@ styled = (
         [
             # Table dimensions
             {"selector": "table", "props": [
-                ("width", "100vw !important"),
+                ("width", "100% !important"),
                 ("table-layout", "auto")
                 ("max-height", "240px"),
                 ("margin", "0px"),
