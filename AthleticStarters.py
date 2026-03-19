@@ -38,16 +38,14 @@ if round == "F":
 else: 
     round = "HEAT "+heat
 
-if age == 19:
-    age = "TVET U19"
-elif age == 23:
-    age = "TVET SENIOR"
-elif age == 25:
+if age < 20:
+    age = "U19"
+elif age in range (20,30):
     age = "SENIOR"
-elif age == 99:
-    age = "MASTERS"
+elif age in range (25,29):
+    age = "SENIOR"
 else: 
-    age = "MIXED AGE" #+str(age)
+    age = "MASTERS" #+str(age)
 
 # Now you can build your head string in any order you like
 head = f"{round} {gender} {age} {item}"
