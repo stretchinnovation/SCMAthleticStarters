@@ -218,8 +218,9 @@ st.html(
     f"""
     <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
-        <div>{styled.to_html()}</div>
+        
         
     </div>
+    <div>{styled.to_html()}</div>
     """
 )
