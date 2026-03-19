@@ -2,7 +2,7 @@ permissions:
   contents: write
 
 
-  name: Force Streamlit Redeploy
+name: Force Streamlit Redeploy
 
 on:
   push:
