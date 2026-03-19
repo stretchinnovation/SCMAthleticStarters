@@ -1,5 +1,3 @@
-#
-
 import streamlit as st
 import pandas as pd
 import requests
@@ -75,7 +73,6 @@ match item:
     case _:
         columns_to_show = ["Surname", "Firstname", "Number", "Team"]
 
-
 # Load Poppins font globally
 st.markdown(
     """
@@ -123,7 +120,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 ) 
-
 
 # Create a Styler with transparent backgrounds
 styled = (
@@ -206,8 +202,6 @@ styled = (
         ]
     )
 )
-
-
 
 # Render styled table and head string inside a RESULTS div
 st.html(
