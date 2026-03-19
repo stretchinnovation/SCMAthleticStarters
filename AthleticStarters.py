@@ -171,7 +171,7 @@ styled = (
             # Force fixed widths with !important
             {"selector": "td.col0, th.col0", "props": [
                 ("text-align", "center"),
-                ("width", "40px !important"),
+                ("width", "30px !important"),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col1, th.col1", "props": [
