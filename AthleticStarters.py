@@ -161,7 +161,7 @@ styled = (
             {"selector": "td", "props": [
                 ("font-family", "Poppins"),
                 ("text-transform", "uppercase"),
-                ("background-image", "linear-gradient(135deg, #101020,#1b1b36,#25254a, #303060) !important"),
+                ("background-image", "linear-gradient(135deg, #101020,#101020,#101020,#101020,#1b1b36,#25254a, #303060) !important"),
                 ("margin", "0"),
                 ("padding", "0"),
                 ("font-size", "18px"),
