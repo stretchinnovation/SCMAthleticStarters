@@ -150,6 +150,7 @@ styled = (
                 ("color", "#ffffff"),
                 ("background-image", "linear-gradient(135deg, #E5007E,#E5007E,#E5007E,#E5007E,#E5007E,#b00466,#7a084f, #101020) !important"),
                 ("text-transform", "uppercase"),
+                ("width", "100%"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
                 ("border", "none"),
