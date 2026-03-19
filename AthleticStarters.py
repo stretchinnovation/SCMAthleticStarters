@@ -115,11 +115,12 @@ st.markdown(
         <style>
         /* Center the RESULTS div in the page */
         #STARTERS {
-            display: flex;
-            justify-content: left;   /* horizontal center */
-            align-items: top;       /* vertical center */
-            flex-direction: column;    /* stack header + table */
-            min-height: 100vh;         /* take full viewport height */
+            #display: flex;
+            #justify-content: left;   /* horizontal center */
+            #align-items: top;       /* vertical center */
+            #flex-direction: column;    /* stack header + table */
+            #min-height: 100vh;         /* take full viewport height */
+            width = 100% vw
         }
         </style>
     
