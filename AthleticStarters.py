@@ -140,8 +140,7 @@ styled = (
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
-                ("border-collapse", "collapse"),  # ensure borders collapse
-                ("box-sizing", "border-box")
+                ("border-collapse", "collapse")  # ensure borders collapse
             ]},
             # Header styling 
             {"selector": "th", "props": [
@@ -150,7 +149,6 @@ styled = (
                 ("color", "#ffffff"),
                 ("background-image", "linear-gradient(135deg, #E5007E,#E5007E,#E5007E,#E5007E,#E5007E,#b00466,#7a084f, #101020) !important"),
                 ("text-transform", "uppercase"),
-                ("width", "100%"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
                 ("border", "none"),
@@ -164,7 +162,6 @@ styled = (
                 ("background-image", "linear-gradient(150deg, #101020,#101020,#101020, #303060) !important"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
-                #("border", "none"),
                 ("font-size", "18px"),
                 ("white-space", "nowrap")  # prevent wrapping in headers
             ]},
@@ -217,8 +214,8 @@ styled = (
 st.html(
     f"""
     <div id="STARTERS">
-        <div class="custom-subheader">{head}</div>
-        {styled.to_html()}
+        <div class="custom-subheader">{head}<br>
+        {styled.to_html()}</div>
     </div>
     """
 )
