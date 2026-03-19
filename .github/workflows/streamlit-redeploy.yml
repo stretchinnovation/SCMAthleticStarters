@@ -1,4 +1,8 @@
-name: Force Streamlit Redeploy
+permissions:
+  contents: write
+
+
+  name: Force Streamlit Redeploy
 
 on:
   push:
