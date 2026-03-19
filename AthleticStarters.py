@@ -214,8 +214,9 @@ styled = (
 st.html(
     f"""
     <div id="STARTERS">
-        <div class="custom-subheader">{head}<br>
-        {styled.to_html()}</div>
+        <div class="custom-subheader">{head}</div>
+        <br>
+        {styled.to_html()}
     </div>
     """
 )
