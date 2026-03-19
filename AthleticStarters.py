@@ -147,7 +147,7 @@ styled = (
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
-                ("border-collapse", "collapse")  # ensure borders collapse
+                #("border-collapse", "collapse")  # ensure borders collapse
             ]},
             # Header styling 
             {"selector": "th", "props": [
