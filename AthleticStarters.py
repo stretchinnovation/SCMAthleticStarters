@@ -215,7 +215,7 @@ styled = (
 # Render styled table and head string inside a RESULTS div
 st.html(
     f"""
-    <div>
+    <div id="STARTERS">
         <div class="custom-subheader">{head}</div>
         <div>{styled.to_html()}</div>
         
