@@ -113,7 +113,6 @@ st.markdown(
         margin-right: 2px;
     }
     </style>
-   
     """,
     unsafe_allow_html=True
 ) 
@@ -128,7 +127,7 @@ styled = (
         [
             # Table dimensions
             {"selector": "table", "props": [
-                ("width", "100%"),
+                #("width", "100%"),
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
@@ -160,7 +159,7 @@ styled = (
             # Force fixed widths with !important
             {"selector": "td.col0, th.col0", "props": [
                 ("text-align", "center"),
-                ("width", "60px !important"),
+                ("width", "40px !important"),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col1, th.col1", "props": [
@@ -176,7 +175,7 @@ styled = (
             {"selector": "td.col3, th.col3", "props": [
                 ("text-align", "center"),
                 ("text-align", "center"),
-                ("width", "100px !important"),
+                ("width", "40px !important"),
                 ("padding", "0px 30px"),
             ]},
             {"selector": "td.col4, th.col4", "props": [
