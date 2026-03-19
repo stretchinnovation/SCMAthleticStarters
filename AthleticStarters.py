@@ -143,7 +143,7 @@ styled = (
             # Table dimensions
             {"selector": "table", "props": [
                 ("width", "100%"),          # stretch to parent width
-                ("table-layout", "auto"),   # keep proportional sizing
+                ("table-layout", "fixed"),   # keep proportional sizing
                 ("max-height", "240px"),
                 ("margin", "0px"),
                 ("padding", "0px 0px"),
