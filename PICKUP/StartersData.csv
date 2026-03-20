@@ -1,6 +1,6 @@
-Seq,Item,Gender,Age,Round,Heat,Time,Wind
-42,400m Hurdles,Men,25,F,0,13:30,
-Lane,Surname,Firstname,Number,Team
-4,ZWANE,SMANGA,370,NCS
-5,NDABA,SIPHOKUHLE,359,NCS
-6,KUNENE,SIMPHIWE,351,NCS
+"Seq","Item","Gender","Age","Round","Heat","Time","Wind"
+46,400m Hurdles,Women,25,F,0,13:40,
+"Lane","Surname","Firstname","Number","Team"
+4,TSHWALA,PHIWOKUHLE,344,NCS
+5,OJESE,NEBO,342,NCS
+6,JULIUS,ABBIE,126,EPG
