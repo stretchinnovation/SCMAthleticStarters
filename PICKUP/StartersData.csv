@@ -1,4 +1,4 @@
-Seq,Item,Gender,Age,Round,Heat,Time,Wind
-51,HighJump,Men,99,F,0,14:00,
-Lane,Surname,Firstname,Number,Team
-1,GROVÉ,PEET,201,HILL
+"Seq","Item","Gender","Age","Round","Heat","Time","Wind"
+53,TripleJump,Men,25,F,0,14:00,
+"Lane","Surname","Firstname","Number","Team"
+1,KHAN,MUHAMMED,4,ASP
