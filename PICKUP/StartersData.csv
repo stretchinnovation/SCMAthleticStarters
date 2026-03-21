@@ -1,6 +1,6 @@
-"Seq","Item","Gender","Age","Round","Heat","Time","Wind"
-125,Women 1500m (TVET),Women,22,F,0,11:00,
-"Lane","Surname","Firstname","Number","Team"
+Seq,Item,Gender,Age,Round,Heat,Time,Wind
+125,1500m (TVET),Women,22,F,0,11:00,
+Lane,Surname,Firstname,Number,Team
 1,MASONDO,BONGIWE,216,MAJ
 2,HLATSHWAYO,SIQINISELO,212,MAJ
 3,MAPHALALA,NOMONDE,92,ELA
